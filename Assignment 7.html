@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Link & Image Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .img-container {
+            text-align: center;
+        }
+        
+        img {
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+        
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #d63384;
+        }
+        
+        .hint {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mastering HTML Links</h1>
+        <p>A demonstration of <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, and <code>&lt;map&gt;</code> tags.</p>
+    </header>
+
+    <section>
+        <h2>1. Image as a Direct Link</h2>
+        <p>This mountain image is wrapped in an anchor tag. Click anywhere on it to go to <strong>National Geographic</strong>.</p>
+        <div class="img-container">
+            <a href="https://www.nationalgeographic.com" target="_blank">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/5165806750466990057_0" alt="Mountain Link" width="500">
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Multiple Links (Image Map)</h2>
+        <p>This single image has two "hotspots." </p>
+        <ul>
+            <li>Click the <strong>Left Side (The Peak)</strong> for Wikipedia.</li>
+            <li>Click the <strong>Right Side (The Sky)</strong> for Weather.</li>
+        </ul>
+
+        <div class="img-container">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/5165806750466990057_0" alt="Interactive Mountain" usemap="#mountain-map" width="600">
+
+            <map name="mountain-map">
+                <area shape="rect" coords="0,0,300,450" alt="Wikipedia" href="https://en.wikipedia.org/wiki/Mountain" target="_blank">
+                <area shape="rect" coords="301,0,600,450" alt="Weather" href="https://www.weather.com" target="_blank">
+            </map>
+        </div>
+        <p class="hint">Note: Your cursor will change to a pointer only when hovering over the active link areas.</p>
+    </section>
+
+    <section>
+        <h2>3. Understanding Paths</h2>
+        <p>In the code above, I used an <strong>Absolute Path</strong> (a full URL). If the image was on your computer, you would use a <strong>Relative Path</strong>:</p>
+        <table border="1" cellpadding="10" style="width:100%; border-collapse: collapse; text-align: left;">
+            <tr style="background: #f9f9f9;">
+                <th>Type</th>
+                <th>Code Example</th>
+            </tr>
+            <tr>
+                <td><strong>Absolute</strong></td>
+                <td><code>src="https://website.com/photo.jpg"</code></td>
+            </tr>
+            <tr>
+                <td><strong>Relative (Same Folder)</strong></td>
+                <td><code>src="mountain.jpg"</code></td>
+            </tr>
+            <tr>
+                <td><strong>Relative (Sub-folder)</strong></td>
+                <td><code>src="images/mountain.jpg"</code></td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="student.xsl"?>
+
+<students>
+    <student>
+        <name>Snehal Khot</name>
+        <marks>85</marks>
+        <branch>CSE</branch>
+    </student>
+
+    <student>
+        <name>Rahul Patil</name>
+        <marks>55</marks>
+        <branch>IT</branch>
+    </student>
+
+    <student>
+        <name>Anjali Shah</name>
+        <marks>35</marks>
+        <branch>ECE</branch>
+    </student>
+
+    <student>
+        <name>Vikram Singh</name>
+        <marks>75</marks>
+        <branch>ME</branch>
+    </student>
+
+    <student>
+        <name>Priya Verma</name>
+        <marks>45</marks>
+        <branch>CSE</branch>
+    </student>
+
+    <student>
+        <name>Arjun Kumar</name>
+        <marks>65</marks>
+        <branch>IT</branch>
+    </student>
+
+</students>
